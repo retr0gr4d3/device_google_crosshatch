@@ -41,6 +41,10 @@ PRODUCT_PROPERTY_OVERRIDES += af.fast_track_multiplier=1
 # Pixelstats broken mic detection
 PRODUCT_PROPERTY_OVERRIDES += vendor.audio.mic_break=true
 
+#Permissons
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.control_privapp_permissions=log
+
 # Setting vendor SPL
 VENDOR_SECURITY_PATCH = "2018-09-05"
 
