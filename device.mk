@@ -787,3 +787,4 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.vendor.build.svn=4
     ro.vendor.build.svn=5
+    ro.vendor.build.svn=6
