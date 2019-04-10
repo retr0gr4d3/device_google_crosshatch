@@ -46,5 +46,11 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     BUILD_FINGERPRINT=google/crosshatch/crosshatch:9/PQ2A.190305.002/5240760:user/release-keys \
     PRIVATE_BUILD_DESC="crosshatch-user 9 PQ2A.190305.002 5240760 release-keys"
 
+# Shishufied builds
+BOOTLEGGERS_BUILD_TYPE := Shishufied
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.bootleggers.maintainer=stebomurkn420
+
 $(call inherit-product-if-exists, vendor/google/crosshatch/crosshatch-vendor.mk)
 $(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
