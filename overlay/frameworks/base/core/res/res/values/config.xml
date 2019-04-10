@@ -428,6 +428,9 @@
     <!-- Does device support ActiveEdge? -->
     <bool name="config_hasActiveEdge">true</bool>
 
+    <!-- Whether the device supports Smart Pixels -->
+    <bool name="config_enableSmartPixels">true</bool>
+
     <!-- Applications which are disabled unless matching a particular sku -->
     <string-array name="config_disableApksUnlessMatchedSku_apk_list" translatable="false">
         <item>com.felicanetworks.mfs</item>
