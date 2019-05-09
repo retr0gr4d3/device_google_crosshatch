@@ -43,8 +43,8 @@ PRODUCT_MANUFACTURER := Google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=crosshatch \
-    BUILD_FINGERPRINT=google/crosshatch/crosshatch:9/PQ2A.190405.003/5310204:user/release-keys \
-    PRIVATE_BUILD_DESC="crosshatch-user 9 PQ2A.190405.003 5310204 release-keys"
+    BUILD_FINGERPRINT=google/crosshatch/crosshatch:9/PQ3A.190505.002/5450365:user/release-keys \
+    PRIVATE_BUILD_DESC="crosshatch-user 9 PQ3A.190505.002 5450365 release-keys"
 
 # Shishufied builds
 BOOTLEGGERS_BUILD_TYPE := Shishufied
