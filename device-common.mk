@@ -23,6 +23,10 @@ PRODUCT_PLATFORM := sdm845
 
 include device/google/crosshatch/device.mk
 
+# Bootanimation
+export TARGET_USE_SINGLE_BOOTANIMATION=true
+export TARGET_PICK_BOOTANIMATION="1"
+
 # Audio fluence, ns, aec property, voice volume steps
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.qc.sdk.audio.fluencetype=fluencepro \
