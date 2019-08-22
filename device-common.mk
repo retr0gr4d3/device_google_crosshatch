@@ -21,6 +21,14 @@ LOCAL_PATH := device/google/crosshatch
 # define hardware platform
 PRODUCT_PLATFORM := sdm845
 
+# Telephony
+PRODUCT_PACKAGES += \
+    telephony-ext \
+    ims-ext-common \
+    qti-telephony-common
+PRODUCT_BOOT_JARS += \
+    telephony-ext
+
 include device/google/crosshatch/device.mk
 
 # Bootanimation
