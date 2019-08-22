@@ -45,9 +45,6 @@ PRODUCT_PROPERTY_OVERRIDES += af.fast_track_multiplier=1
 # Pixelstats broken mic detection
 PRODUCT_PROPERTY_OVERRIDES += vendor.audio.mic_break=true
 
-# Setting vendor SPL
-VENDOR_SECURITY_PATCH = "2018-09-05"
-
 # MIDI feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
@@ -115,3 +112,6 @@ PRODUCT_PACKAGES += \
 # whitelisted app
 PRODUCT_COPY_FILES += \
     device/google/crosshatch/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+
+# Google apps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)

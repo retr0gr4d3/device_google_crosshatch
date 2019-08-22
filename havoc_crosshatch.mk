@@ -25,8 +25,15 @@
 TARGET_SCREEN_HEIGHT := 2960
 TARGET_SCREEN_WIDTH := 1440
 
-# Include DU common configuration
-include vendor/bootleggers/config/common_full_phone.mk
+# Inherit some common Havoc stuff.
+$(call inherit-product, vendor/havoc/config/common.mk)
+
+TARGET_DEVICE := bonito
+HAVOC_BUILD_TYPE := Official
+
+# Maintainer Prop
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.havoc.maintainer=stebomurkn420
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
@@ -35,7 +42,7 @@ $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := bootleg_crosshatch
+PRODUCT_NAME := havoc_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 3 XL
@@ -43,14 +50,7 @@ PRODUCT_MANUFACTURER := Google
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=crosshatch \
-    BUILD_FINGERPRINT=google/crosshatch/crosshatch:9/PQ3A.190505.002/5450365:user/release-keys \
-    PRIVATE_BUILD_DESC="crosshatch-user 9 PQ3A.190505.002 5450365 release-keys"
-
-# Shishufied builds
-BOOTLEGGERS_BUILD_TYPE := Shishufied
-
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.bootleggers.maintainer=stebomurkn420
+    BUILD_FINGERPRINT=google/crosshatch/crosshatch:9/PQ3A.190801.002/5670241:user/release-keys \
+    PRIVATE_BUILD_DESC="crosshatch-user 9 PQ3A.190801.002 5670241 release-keys"
 
 $(call inherit-product-if-exists, vendor/google/crosshatch/crosshatch-vendor.mk)
-$(call inherit-product-if-exists, vendor/pixelgapps/pixel-gapps.mk)
