@@ -115,3 +115,6 @@ PRODUCT_PACKAGES += \
 # whitelisted app
 PRODUCT_COPY_FILES += \
     device/google/crosshatch/qti_whitelist.xml:system/etc/sysconfig/qti_whitelist.xml
+
+# Google apps
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
