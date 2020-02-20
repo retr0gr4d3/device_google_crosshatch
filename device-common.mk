@@ -53,6 +53,11 @@ VENDOR_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 # Set boot SPL
 BOOT_SECURITY_PATCH = $(PLATFORM_SECURITY_PATCH)
 
+# Include Google apps by default
+ifneq ($(TARGET_BUILD_GAPPS),false)
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
+endif
+
 # Permission HACKERY
 PRODUCT_PRODUCT_PROPERTIES += \
     ro.control_privapp_permissions=log \
