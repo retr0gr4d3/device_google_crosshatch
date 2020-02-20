@@ -72,6 +72,10 @@ PRODUCT_PRODUCT_PROPERTIES += \
     persist.radio.data_con_rprt=1 \
     persist.radio.calls.on.ims=1
 
+# Google Device
+PRODUCT_PACKAGES += \
+    SystemUIGoogle
+
 # MIDI feature
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.software.midi.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.software.midi.xml
