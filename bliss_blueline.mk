@@ -17,10 +17,11 @@ PRODUCT_MODEL := Pixel 3
 TARGET_MANUFACTURER := Google
 PRODUCT_RESTRICT_VENDOR_FILES := false
 
-PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRODUCT_NAME=blueline \
-    PRIVATE_BUILD_DESC="blueline-user 10 QQ1A.200205.002 6084386 release-keys"
+PRIVATE_BUILD_DESC="blueline-user 10 QQ2A.200305.003 6138846 release-keys"
 
-BUILD_FINGERPRINT := google/blueline/blueline:10/QQ1A.200205.002/6084386:user/release-keys
+BUILD_FINGERPRINT := "google/blueline/blueline:10/QQ2A.200305.003/6138846:user/release-keys"
+
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.build.fingerprint=google/blueline/blueline:10/QQ2A.200305.003/6138846:user/release-keys
 
 $(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
